@@ -2,6 +2,7 @@
 
 @page "/login"
 @using Authorization.Models
+@using Authorization.Services
 @inject NavigationManager Navigation;
 @inject CustomAuthenticationStateProvider AuthStateProvider;
 
@@ -31,12 +32,12 @@
 </EditForm>
 
 @code {
-    private LoginViewModel loginModel = new();
-
+    private LoginModel loginModel = new();
+    private AccountService accountService = new();
     private async Task HandleValidSubmit()
     {
         //Valiate user acount
-        var successful = loginModel.ValidateLogin(out string jwtToken);
+        var successful = accountService.ValidateLogin(out string jwtToken, loginModel);
 
         //Not successful, don't need to do anything
         if (!successful)

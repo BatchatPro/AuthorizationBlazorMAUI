@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
 using Authorization.Data;
 using Microsoft.AspNetCore.Components.Authorization;
+using Authorization.Services;
 
 namespace Authorization;
 

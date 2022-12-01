@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Components.Authorization;
 using System.Security.Claims;
 
-namespace Authorization
+namespace Authorization.Services
 {
     /// <summary>
     /// This is our custom implementation of an authentication state provider.  The primary purpose of this is 
